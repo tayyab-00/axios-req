@@ -168,9 +168,34 @@ function cancelToken() {
 }
 
 // INTERCEPTING REQUESTS & RESPONSES
+function interceptreqandres(){
+const instance = axios.create({
+  baseURL: 'https://api.example.com',
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: 'Bearer yourAccessToken',
+  },
+});
 
+// Use the instance to make requests
+instance.get('/resource').then((response) => {
+  console.log('Response from Axios Instance:', response.data);
+});}
 // AXIOS INSTANCES
+function instances(){
+const instance = axios.create({
+  baseURL: 'https://api.example.com',
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: 'Bearer yourAccessToken',
+  },
+});
 
+// Use the instance to make requests
+instance.get('/resource').then((response) => {
+  console.log('Response from Axios Instance:', response.data);
+});
+}
 // Show output in browser
 function showOutput(res) {
   document.getElementById('res').innerHTML = `
