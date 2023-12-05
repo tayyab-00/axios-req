@@ -21,9 +21,3 @@ router.get('/contactus', (req, res, next) => {
 });
 
 module.exports = router;
-//with controllers
-module.exports = {
-  getContactUs: (req, res) => {
-    res.render('contactus', { title: 'Contact Us' });
-  },
-};
